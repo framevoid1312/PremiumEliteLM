@@ -251,8 +251,6 @@
 
     .h1 span {
       background: var(--lime);
-      padding: 2px 0;
-      box-shadow: 8px 0 0 var(--lime), -8px 0 0 var(--lime);
       box-decoration-break: clone;
       -webkit-box-decoration-break: clone;
     }
@@ -575,16 +573,17 @@
       display: inline;
       color: #121212;
       background: var(--lime);
-      padding: 2px 0;
-      box-shadow: 6px 0 0 var(--lime), -6px 0 0 var(--lime);
       box-decoration-break: clone;
       -webkit-box-decoration-break: clone;
-      clip-path: inset(0 100% 0 0);
-      transition: clip-path .8s cubic-bezier(.25,.1,.25,1);
+    }
+
+    .reveal .h2-animated {
+      background: transparent;
+      transition: background .6s ease;
     }
 
     .reveal.visible .h2-animated {
-      clip-path: inset(0 0 0 0);
+      background: var(--lime);
     }
 
     /* ===== RESPONSIVE ===== */
