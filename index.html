@@ -242,7 +242,15 @@
     .h1 {
       max-width: 1040px;
       font-size: clamp(2.75rem, 7vw, 7rem);
-      line-height: .9; text-transform: uppercase; margin: 0;
+      line-height: 1.05; text-transform: uppercase; margin: 0;
+      color: #121212;
+    }
+
+    .h1 span {
+      background: var(--lime);
+      padding: 2px 10px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
     }
 
     .lead {
@@ -556,24 +564,20 @@
     .d3 { animation-delay: .45s; }
     .d4 { animation-delay: .6s; }
 
-    /* ===== ANIMATED TITLE UNDERLINE ===== */
+    /* ===== ANIMATED TITLE HIGHLIGHT ===== */
     .h2-animated {
       display: inline;
-      background-image: linear-gradient(var(--lime), var(--lime));
-      background-repeat: no-repeat;
-      background-size: 100% 3px;
-      background-position: -100% 100%;
-    }
-
-    @keyframes underline-sweep {
-      0%   { background-position: -100% 100%; }
-      40%  { background-position: 0% 100%; }
-      60%  { background-position: 0% 100%; }
-      100% { background-position: 200% 100%; }
+      color: #121212;
+      background: var(--lime);
+      padding: 2px 8px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      clip-path: inset(0 100% 0 0);
+      transition: clip-path .8s cubic-bezier(.25,.1,.25,1);
     }
 
     .reveal.visible .h2-animated {
-      animation: underline-sweep 1.8s ease forwards;
+      clip-path: inset(0 0 0 0);
     }
 
     /* ===== RESPONSIVE ===== */
@@ -679,7 +683,7 @@
       <div class="wrap">
         <div class="copy">
           <p class="label fade"><span class="label-emoji">🎬</span> Production transport — Athens, Greece</p>
-          <h1 class="h1 display fade d1">Reliable Crew Transport for Shoots, Sets, and Production Days</h1>
+          <h1 class="h1 display fade d1"><span>Reliable Crew Transport for Shoots, Sets, and Production Days</span></h1>
           <p class="lead fade d2">Professional VW Kombi van transport for commercials, films, series, airport pickups, and production teams in Athens and across Greece.</p>
           <div class="actions fade d3">
             <a class="primary" href="#booking">Request Availability ↗</a>
