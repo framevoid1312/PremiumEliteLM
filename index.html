@@ -720,8 +720,8 @@
     #cursor.active {
       width: 40px; height: 40px;
     }
-    body.light #cursor { background: #6B5BC7; mix-blend-mode: normal; }
-    body.light #cursor.active { width: 16px; height: 16px; }
+    body.light #cursor { background: transparent; border: 2px solid #6B5BC7; mix-blend-mode: normal; }
+    body.light #cursor.active { width: 40px; height: 40px; border-width: 3px; }
     @media (pointer: coarse) {
       #cursor { display: none; }
     }
